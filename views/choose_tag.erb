@@ -1,0 +1,17 @@
+<%= erb :'_header' %>
+
+
+<div class="container">
+ <div id="content_box">
+  <h1 class="tc">What tag do you want to display?</h1>
+
+  <form action="/tag" method="get">
+   <fieldset>
+    <input type="text" name="tag" value="" /> <input type="submit" value="Show Photos »" />
+   </fieldset>
+  </form>
+ </div>
+</div>
+
+
+<%= erb :'_footer' %>

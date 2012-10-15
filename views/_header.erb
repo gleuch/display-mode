@@ -1,0 +1,14 @@
+<DOCTYPE html>
+<html>
+<head>
+ <title><%= (@page_title.nil? || @page_title == '' ? 'Display Mode' : @page_title) %></title>
+ <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="app.js"></script>
+ <link rel="stylesheet" href="app.css" media="all" type="text/css" />
+</head>
+<body class="<%= @body_class %>">
+
+ <header id="header" class="container">
+  <h1 id="logo"><a href="/">Display Mode</a></h1>
+  <p>View real-time photos by tag names. Perfect for your next event.</p>
+ </header>

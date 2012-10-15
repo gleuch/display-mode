@@ -1,0 +1,28 @@
+<%= erb :'_header' %>
+
+
+<script type="text/javascript">
+  if (InstagramDisplayMode === undefined) var InstagramDisplayMode = {};
+  InstagramDisplayMode.photos = <%= @photos.to_json %>;
+  InstagramDisplayMode.photos_index = <%= @photos.map{|k,v| k} %>;
+  InstagramDisplayMode.tag = "<%= params[:tag] %>";
+</script>
+
+
+<div id="display_board" class="no_photos">
+ <div id="display_board_photos">
+  
+ </div>
+ 
+ <div class="no_photos bottom_bar">
+  <p>Tag your photos with #<%= params[:tag] %>!</p>
+ </div>
+
+ <div class="has_photos bottom_bar">
+  <p>Tag your photos with #<%= params[:tag] %>!</p>
+ </div>
+</div>
+
+<script type="text/javascript">try {InstagramDisplayMode.start();} catch(e) {}</script>
+
+<%= erb :'_footer' %>
