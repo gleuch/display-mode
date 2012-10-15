@@ -56,7 +56,11 @@ end
 
 # INDEX PAGE
 get '/' do
-  erb :index
+  if has_access_token
+    redirect '/tag'
+  else
+    erb :index
+  end
 end
 
 
@@ -83,7 +87,7 @@ html_show_tags = lambda {
         @photos = fetch_photos_for_tag(params[:tag])
         erb :view_tag
       rescue => err
-        puts err.inspect
+        session[:access_token] = nil
         erb :error_tag
       end
 
@@ -111,6 +115,7 @@ json_show_tags = lambda {
         @photos = fetch_photos_for_tag(params[:tag])
         {:success => true, :photos => @photos}.to_json
       rescue
+        session[:access_token] = nil
         {:error => true, :message => 'Server error.'}.to_json
       end
 

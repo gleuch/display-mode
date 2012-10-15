@@ -8,7 +8,7 @@ InstagramDisplayMode.index_at = null;
 InstagramDisplayMode.photos = {};
 InstagramDisplayMode.photos_index = {};
 InstagramDisplayMode.fetch_interval = (1 * 60 * 1000); /* minutes */
-InstagramDisplayMode.rotate_interval = (10 * 1000); /* seconds */
+InstagramDisplayMode.rotate_interval = (8 * 1000); /* seconds */
 InstagramDisplayMode.rotate_timeout = null;
 InstagramDisplayMode.tag = '';
 

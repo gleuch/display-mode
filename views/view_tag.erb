@@ -1,3 +1,4 @@
+<% @body_class = 'display_mode' %>
 <%= erb :'_header' %>
 
 
@@ -13,13 +14,20 @@
  <div id="display_board_photos">
   
  </div>
- 
+
+ <div id="display_board_cancel"><a href="/tag" title="Exit Display Mode">&times;</a></div>
+
+ <div class="no_photos error container">
+  <h1><span>#<%= params[:tag] %></span></h1>
+  <p>Share your Instagram photos with the crowd.<br />Tag your photos with <span>#<%= params[:tag] %></span>.</p>
+ </div>
+
  <div class="no_photos bottom_bar">
-  <p>Tag your photos with #<%= params[:tag] %>!</p>
+  <p>Tag your photos with <span>#<%= params[:tag] %></span>!</p>
  </div>
 
  <div class="has_photos bottom_bar">
-  <p>Tag your photos with #<%= params[:tag] %>!</p>
+  <p>Tag your photos with <span>#<%= params[:tag] %></span>!</p>
  </div>
 </div>
 

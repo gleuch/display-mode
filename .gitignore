@@ -1,0 +1,5 @@
+.DS_Store
+._*
+.bundle
+oauth.yml
+database.yml
