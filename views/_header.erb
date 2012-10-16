@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title><%= (@page_title.nil? || @page_title == '' ? 'Display Mode' : @page_title) %></title>
+ <title><%= (@page_title.nil? || @page_title == '' ? 'Display Mode, by XOlator™' : @page_title) %></title>
+
+ <meta content="XOlator - xolator.com" name="author" />
+
+ <meta content='Display Mode, by XOlator™' name='og:title' />
+ <meta content='View real-time photos by tag names. Perfect for your next event.' name='og:description' />
+ <meta content='Display Mode, by XOlator™' name='og:site_name' />
+ <meta content='website' name='og:type' />
+ <meta content='http://displaymode.xolator.com/' name='og:url' />
+
  <script type="text/javascript" src="jquery-1.8.2.min.js"></script>
  <script type="text/javascript" src="app.js"></script>
  <link rel="stylesheet" href="app.css" media="all" type="text/css" />
+ <script type="text/javascript">var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-35530303-2']); _gaq.push(['_trackPageview']); (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 </head>
 <body class="<%= @body_class %>">
 

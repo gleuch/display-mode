@@ -16,7 +16,7 @@ InstagramDisplayMode.tag = '';
 InstagramDisplayMode.start = function() {
   jQuery(document).ready(function(){
     InstagramDisplayMode.rotate();
-    // setTimeout(function() {InstagramDisplayMode.fetch();}, InstagramDisplayMode.fetch_interval);
+    setTimeout(function() {InstagramDisplayMode.fetch();}, InstagramDisplayMode.fetch_interval);
   });
 };
 

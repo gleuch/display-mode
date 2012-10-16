@@ -1,5 +1,8 @@
 .DS_Store
 ._*
-.bundle
+.bundle/
 oauth.yml
 database.yml
+log/
+config.ru
+tmp/
